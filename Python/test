@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+#A System Information Gathering Script
+import subprocess
 
-import os
+#Command 2
+diskspace = "df"
+diskspace_arg = "-h"
+print "Gathering diskspace information %s command:\n" % diskspace
+subprocess.call([diskspace, diskspace_arg])
 
-if os.path.isdir("/tmp"):
-	print "/tmp is a directory"
-else:
-	print "/tmp is not a directory"
